@@ -16,7 +16,7 @@ docker run [-p container_port:host_port] [-v volume_name:path_to_local_volume] i
 
 # Network for communication for MongoDB and Backend 
 ## Create network
-docker network create -d bridge my-bridge-network
+docker network create my-bridge-network
 
 
 # kubernets
@@ -47,3 +47,11 @@ For being accessible to outside of the Cluster
 
 # Auto generated environment variable
 ## [service_name]_SERVICE_HOST
+
+## Types of services for the project
+
+Service of Mongodb pod is ClusterIP type
+
+Service of Backend pod is LoadBalancer type (because it is accessed by the client browser)
+
+Service of Frontend pod is LoadBalancer type
