@@ -84,7 +84,7 @@ app.delete('/goals/:id', async (req, res) => {
 });
 
 mongoose.connect(
-  'mongodb://${process.env.DB_ADDRESS:27017}/course-goals',
+  'mongodb://mongodb_cont:27017/course-goals',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
