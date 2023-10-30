@@ -1,6 +1,6 @@
 # Commands for the backend container
 
-docker run -d --name=backend_cont -p 40:80 -v backend_vol:/front_end_vol --network=mongo_backend_net backend
+docker run -d --name=backend_cont -p 40:80 -v backend_vol:/backend_vol --network=mongo_backend_net backend
 
 
 

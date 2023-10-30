@@ -1,0 +1,41 @@
+version: '3.8'
+services:
+  backend:
+    image: tapadinhas/iacd-backend:Assignment3
+    ports:
+      - "40:80" # Map host port 40 to container port 80
+    networks:
+      - mongo_backend_net
+    depends_on:
+      - mongo
+    environment:
+      DB_ADDRESS: mongo
+    volumes:
+      - backend_vol:/backend_vol 
+
+  frontend:
+    image: tapadinhas/iacd-frontend:Assignment1-and-2
+    ports:
+      - "3000:3000" # Map host port 3000 to container port 3000
+    depends_on:
+      - backend
+    volumes:
+      - frontend_vol:/frontend_vol
+
+  mongo:
+    image: mongo
+    networks:
+      - mongo_backend_net
+    environment:
+      MONGO_INITDB_DATABASE: course-goals
+    volumes:
+      - mongo_vol:/data/db
+
+networks:
+  mongo_backend_net:
+    driver: bridge
+
+volumes:
+  mongo_vol:
+  backend_vol:
+  frontend_vol:
