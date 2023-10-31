@@ -18,6 +18,13 @@ docker run [-p container_port:host_port] [-v volume_name:path_to_local_volume] i
 ## Create network
 docker network create my-bridge-network
 
+# Assignment 3
+## To build and run everything
+docker compose up
+
+## To delete everything
+docker compose down
+
 
 # kubernets
 
