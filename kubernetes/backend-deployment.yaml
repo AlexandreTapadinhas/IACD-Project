@@ -15,3 +15,5 @@ spec:
       containers:
         - name: backend-cont
           image: tapadinhas/iacd-backend:Assignment3-no-env-var
+          ports:
+            - containerPort: 80
