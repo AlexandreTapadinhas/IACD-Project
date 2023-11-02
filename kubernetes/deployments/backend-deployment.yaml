@@ -17,3 +17,10 @@ spec:
           image: tapadinhas/iacd-backend:Assignment3-no-env-var
           ports:
             - containerPort: 80
+          volumeMounts:
+            - mountPath: /logs
+              name: backend-volume
+      volumes:
+        - name: backend-volume
+          persistentVolumeClaim: 
+            claimName: backend-pvc

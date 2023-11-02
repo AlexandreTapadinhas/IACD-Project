@@ -17,3 +17,10 @@ spec:
           image: tapadinhas/iacd-frontend:Assignment1-and-2
           ports:
             - containerPort: 3000
+          volumeMounts:
+            - mountPath: /app
+              name: frontend-volume
+      volumes:
+        - name: frontend-volume
+          persistentVolumeClaim: 
+            claimName: frontend-pvc
