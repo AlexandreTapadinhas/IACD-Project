@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Claim
 metadata:
-  name: mongo-pvc
+  name: frontend-pvc
 spec:
   volumeName: cluster-pv
   accessModes:

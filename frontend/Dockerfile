@@ -10,6 +10,4 @@ COPY . .
 
 EXPOSE 3000
 
-# VOLUME [ "/app/frontend_vol" ]
-
 CMD [ "npm", "start" ]

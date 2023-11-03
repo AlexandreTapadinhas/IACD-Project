@@ -22,9 +22,10 @@ services:
       - "3000:3000"
     depends_on:
       - 'backend'
-
+    volumes:
+      - frontend_vol:/frontend_vol
 
 volumes:
   mongo_vol:
   backend_vol:
-
+  frontend_vol:

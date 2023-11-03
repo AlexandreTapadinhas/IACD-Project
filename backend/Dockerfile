@@ -10,6 +10,4 @@ COPY . .
 
 EXPOSE 80
 
-# VOLUME [ "/app/backend_vol" ]
-
 CMD ["node", "app.js"]
