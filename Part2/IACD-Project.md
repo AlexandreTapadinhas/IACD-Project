@@ -4,15 +4,7 @@ TODO:
     - [ ] Task 2
     - [ ] Task 3
     - [ ] Task 4
-- [ ] Lab 7:
-    - [X] Task 1
-    - [X] Task 2
-    - [X] Task 3
-    - [X] Task 4
-    - [X] Task 5
-    - [ ] Task 6
-    - [ ] Task 7
-- [ ] Lab 8:
+- [X] Lab 7:
     - [X] Task 1
     - [X] Task 2
     - [X] Task 3
@@ -20,6 +12,14 @@ TODO:
     - [X] Task 5
     - [X] Task 6
     - [X] Task 7
-- [ ] Lab 9:
+- [X] Lab 8:
+    - [X] Task 1
+    - [X] Task 2
+    - [X] Task 3
+    - [X] Task 4
+    - [X] Task 5
+    - [X] Task 6
+    - [X] Task 7
+- [X] Lab 9:
      - [X] Task 1
      
