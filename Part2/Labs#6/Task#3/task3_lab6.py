@@ -10,7 +10,6 @@ class SortWordFrequency(MRJob):
         ]
     
     def mapper(self, _, line):
-        # Tokenize the line into words using a simple regex
         words = re.findall(r'\b\w+\b', line.lower())
         for word in words:
             yield word, 1
@@ -20,7 +19,6 @@ class SortWordFrequency(MRJob):
 
 
     def mapper_sort(self, word, total):
-        # Swap key-value for sorting (total, customerId)
         yield '%04d' % int(total), word
 
     def reducer_sort(self, total, words):
