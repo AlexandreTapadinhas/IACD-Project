@@ -18,8 +18,8 @@ TODO:
     - [X] Task 3
     - [X] Task 4
     - [X] Task 5
-    - [ ] Task 6
-    - [ ] Task 7
+    - [X] Task 6
+    - [X] Task 7
 - [ ] Lab 9:
      - [X] Task 1
      

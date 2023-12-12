@@ -1,6 +1,6 @@
 from pyspark.sql import SparkSession
 from pyspark.sql import Row
-from pyspark.sql.types import StructType, StructField, StringType, IntegerType, FloatType
+from pyspark.sql.types import StructType, StructField, IntegerType, FloatType
 
 spark = SparkSession.builder.appName("Minimum temperature").getOrCreate()
 
@@ -27,8 +27,12 @@ t_mins = spark.sql("""
 
 results = t_mins.collect()
 
-print("Top 10 customers:")
+print("\n\nTop 10 customers:")
 for result in results:
-    print("Customer " + str(result[0]) + " spent " + str(round(float(result[1]), 2)))
+    print(" - Customer " + str(result[0]) + " spent " + str(round(float(result[1]), 2)))
+
+print("\n\n")
+
+t_mins.show()
 
 spark.stop()
