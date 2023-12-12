@@ -12,7 +12,7 @@ class AverageNumberFriends(MRJob):
         (userId,userName,age,numFriends) = line.strip().split(',')
         yield int(age), int(numFriends)
 
-    def reducer_get_average(self, key, values):
+    def reducer_get_average(self, age, values):
         total = 0
         count = 0
 
@@ -22,8 +22,8 @@ class AverageNumberFriends(MRJob):
 
         average = total / count if count > 0 else 0
 
-        # Emit the result for each group
-        yield key, average.__format__('.2f')
+
+        yield age, average.__format__('.2f')
 
 if __name__ == '__main__':
     AverageNumberFriends.run()

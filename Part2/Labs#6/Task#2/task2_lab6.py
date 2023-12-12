@@ -37,8 +37,8 @@ class MinTemperatureByCaptital(MRJob):
 
         yield weather_station, int(temperature)
 
-    def reducer_get_min(self, key, values):
-        yield key, min(values)
+    def reducer_get_min(self, weather_station, values):
+        yield weather_station, min(values)
 
 if __name__ == '__main__':
     MinTemperatureByCaptital.run()    

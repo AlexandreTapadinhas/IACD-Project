@@ -21,7 +21,7 @@ class SortWordFrequency(MRJob):
 
     def mapper_sort(self, word, total):
         # Swap key-value for sorting (total, customerId)
-        yield '%04d' % int(total),word
+        yield '%04d' % int(total), word
 
     def reducer_sort(self, total, words):
         for word in words:
