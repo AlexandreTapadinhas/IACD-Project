@@ -4,7 +4,7 @@ from mrjob.step import MRStep
 class SortedAmountSpentByCustomer(MRJob):
     def steps(self):
         return [
-            MRStep(mapper=self.mapper, combiner=self.combiner, reducer=self.reducer_get_sum),
+            MRStep(mapper=self.mapper, reducer=self.reducer_get_sum),
             MRStep(mapper=self.mapper_sort, reducer=self.reducer_sort)
         ]
     
