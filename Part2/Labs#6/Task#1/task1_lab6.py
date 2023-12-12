@@ -23,7 +23,7 @@ class AverageNumberFriends(MRJob):
         average = total / count if count > 0 else 0
 
         # Emit the result for each group
-        yield key, average
+        yield key, average.__format__('.2f')
 
 if __name__ == '__main__':
     AverageNumberFriends.run()

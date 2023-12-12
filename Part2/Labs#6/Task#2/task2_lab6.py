@@ -4,8 +4,20 @@ import numpy as np
 
 data = pd.read_csv('1800.csv')
 
-print(data.iloc[:, 0].unique())
+column_names = ['Station', 'Date', 'Type' , 'Temperature' , 'Uncertainty' , 'Observations' , 'Time' , 'Random']
+data.columns = column_names
+grouped = data.groupby('Station')
+min_temp = grouped['Temperature'].min()
 
+print(min_temp)
+'''
+
+'''
+Station
+EZE00100082   -135
+GM000010962      0
+ITE00100554   -148
+Name: Temperature, dtype: int64
 '''
 
 from mrjob.job import MRJob
