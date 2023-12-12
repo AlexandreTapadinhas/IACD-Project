@@ -13,10 +13,13 @@ TODO:
     - [ ] Task 6
     - [ ] Task 7
 - [ ] Lab 8:
-     - [ ] Task 1
-     - [ ] Task 2
-     - [ ] Task 3
-     - [ ] Task 4
+    - [X] Task 1
+    - [X] Task 2
+    - [X] Task 3
+    - [ ] Task 4
+    - [ ] Task 5
+    - [ ] Task 6
+    - [ ] Task 7
 - [ ] Lab 9:
-     - [ ] Task 1
+     - [X] Task 1
      
