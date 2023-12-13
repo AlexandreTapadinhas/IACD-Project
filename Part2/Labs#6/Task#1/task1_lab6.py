@@ -21,8 +21,6 @@ class AverageNumberFriends(MRJob):
             count += 1
 
         average = total / count if count > 0 else 0
-
-
         yield age, average.__format__('.2f')
 
 if __name__ == '__main__':
