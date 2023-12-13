@@ -16,7 +16,7 @@ lines = spark.read.format('csv').schema(ShoppingStoreSchema).load("customer-orde
 
 lines.createOrReplaceTempView("purchases")
 
-t_mins = spark.sql("""
+amounts = spark.sql("""
                     SELECT 
                         customerID, 
                         SUM(amount) as sum 
@@ -25,7 +25,7 @@ t_mins = spark.sql("""
                     ORDER BY SUM(amount) DESC LIMIT 10
                     """)
 
-results = t_mins.collect()
+results = amounts.collect()
 
 print("\n\nTop 10 customers:")
 for result in results:
@@ -33,6 +33,6 @@ for result in results:
 
 print("\n\n")
 
-t_mins.show()
+#amounts.show()
 
 spark.stop()
