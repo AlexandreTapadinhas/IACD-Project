@@ -1,9 +1,9 @@
 TODO:
-- [ ] Lab 6:
-    - [ ] Task 1
-    - [ ] Task 2
-    - [ ] Task 3
-    - [ ] Task 4
+- [X] Lab 6:
+    - [X] Task 1
+    - [X] Task 2
+    - [X] Task 3
+    - [X] Task 4
 - [X] Lab 7:
     - [X] Task 1
     - [X] Task 2

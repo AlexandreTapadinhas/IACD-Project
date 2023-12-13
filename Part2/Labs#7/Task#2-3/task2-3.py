@@ -1,9 +1,7 @@
 from pyspark import SparkContext
 
-# Create a SparkContext
 sc = SparkContext("local", "Word Frequency")
 
-# Load the input file
 lines = sc.textFile("Book")
 
 words = lines.flatMap(lambda line: line.split(" "))
@@ -14,5 +12,4 @@ sortedWordCounts = wordCounts.sortBy(lambda x: x[1], ascending=False)
 
 print(sortedWordCounts.collect())
 
-# Stop the SparkContext
 sc.stop()
